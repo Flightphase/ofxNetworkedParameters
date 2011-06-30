@@ -12,7 +12,6 @@
 #include "ofMain.h"
 #include "ofxMostPixelsEver.h"
 
-#define USE_NETWORKEDSIMPLEGUITOO
 
 #ifdef USE_NETWORKEDSIMPLEGUITOO
 #include "ofxSimpleGuiToo.h"
