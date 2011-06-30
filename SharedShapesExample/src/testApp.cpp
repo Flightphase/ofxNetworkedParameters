@@ -2,26 +2,24 @@
 
 //--------------------------------------------------------------
 void testApp::setup(){
-	ofSetFrameRate(30);
+	
+	ofSetFrameRate(60);
 	ofSetVerticalSync(true);
+	ofBackground(0);
 	
 	client = new mpeClientTCP();
 	client->setup(ofToDataPath("mpe_client_settings.xml", false), true);
 
 	networkedParameters.attachToNetwork();
 	networkedParameters.setMPEClient(client);
-	
-	
+		
 	// client->useSimulationMode(2);
 	client->start();
 	
 	for (int i = 0; i<9; i++) {
 		isLarge[i] = false;
-		
 		networkedParameters.addNetworkedParameter("bool_" + ofToString(i), &isLarge[i]);
-		
 	}
-	
 }
 
 //--------------------------------------------------------------
@@ -31,18 +29,14 @@ void testApp::update(){
 
 //--------------------------------------------------------------
 void testApp::draw(){
-	ofClear(0, 0, 0, 1);
-
+	
 	ofFill();
-
 	for (int i = 0; i<9; i++) {
 
 		ofSetColor(255, (isLarge[i]==true ? 255 : 0), 0);
 		ofCircle(100 + (i%3)*200, 100 + (i/3)*200, 20 + (isLarge[i]==true ? 50 : 0));
-		
+
 	}
-	
-	
 }
 
 //--------------------------------------------------------------

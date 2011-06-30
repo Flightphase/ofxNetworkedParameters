@@ -1,7 +1,10 @@
 /**
  *  openFrameworks version of the popular synchronization system Most Pixels Ever by Dan Shiffman
+ *
+ *  Modifications+Additions by James George
+ *
  *  original repo: https://github.com/shiffman/Most-Pixels-Ever
- *  our fork: https://github.com/FlightPhase/Most-Pixels-Ever
+ *  fork: https://github.com/FlightPhase/Most-Pixels-Ever
  *
  *  I affectionately refer to as "Most Pickles Ever" since it's gotten me out of the most pickles. ever!
  *
@@ -49,9 +52,7 @@ void mpeClientTCP::start() {
 
 	tcpClient.setVerbose(DEBUG);
 
-	//if(useMainThread){
     ofAddListener(ofEvents.draw, this, &mpeClientTCP::draw);
-	//}
 
     if (!simulationMode && !tcpClient.setup(hostName, serverPort)) {
         err("TCP failed to connect to port " + ofToString(serverPort));

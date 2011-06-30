@@ -1,5 +1,7 @@
 /**
  *  openFrameworks version of the popular synchronization system Most Pixels Ever by Dan Shiffman
+ *  Modifications+Additions by James George
+ *
  *  original repo: https://github.com/shiffman/Most-Pixels-Ever
  *  our fork: https://github.com/FlightPhase/Most-Pixels-Ever
  *
