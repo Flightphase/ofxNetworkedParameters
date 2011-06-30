@@ -11,20 +11,25 @@
 		vrLoc = 0;
 	};
 	221810D013BD203200CECA49 /* changelog.txt */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = text;
+		name = changelog.txt;
+		path = "/Developer/of-nmm/apps/ofxNetworkedParameters/example/addons/ofxMSAInteractiveObject/changelog.txt";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1099, 488}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 443}";
 		};
 	};
-	221810D713BD203200CECA49 /* LICENSE.txt */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1099, 488}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1806}";
-		};
-	};
 	221810DF13BD203200CECA49 /* ofRange.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = ofRange.h;
+		path = "/Developer/of-nmm/apps/ofxNetworkedParameters/example/addons/ofxRange/ofRange.h";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1099, 660}}";
 			sepNavSelRange = "{0, 0}";
@@ -32,6 +37,12 @@
 		};
 	};
 	221810E113BD203200CECA49 /* changelog.txt */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = text;
+		name = changelog.txt;
+		path = "/Developer/of-nmm/apps/ofxNetworkedParameters/example/addons/ofxSimpleGuiToo/changelog.txt";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1099, 488}}";
 			sepNavSelRange = "{0, 0}";
@@ -183,6 +194,13 @@
 			sepNavIntBoundsRect = "{{0, 0}, {1099, 1665}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 745}";
+		};
+	};
+	2218124113BD275200CECA49 /* changelog.txt */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1099, 488}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 443}";
 		};
 	};
 	226658E813BB5A3800E9EBB8 /* mpeServerTCP.cpp */ = {
