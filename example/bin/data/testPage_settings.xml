@@ -1,0 +1,18 @@
+<controls>
+    <Toggle_Bool1>
+        <name>Bool1</name>
+        <value>1</value>
+    </Toggle_Bool1>
+    <Toggle_Bool2>
+        <name>Bool2</name>
+        <value>1</value>
+    </Toggle_Bool2>
+    <SliderFloat_Float1>
+        <name>Float1</name>
+        <value>17.554701</value>
+    </SliderFloat_Float1>
+    <SliderInt_Integer1>
+        <name>Integer1</name>
+        <value>10</value>
+    </SliderInt_Integer1>
+</controls>
