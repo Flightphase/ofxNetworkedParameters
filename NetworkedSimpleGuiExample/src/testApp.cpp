@@ -2,6 +2,11 @@
 
 //--------------------------------------------------------------
 void testApp::setup(){
+	
+	ofSetVerticalSync(true);
+	ofSetFrameRate(30);
+	ofClear(0, 0, 0, 1);
+	
 	client = new mpeClientTCP();
 	client->setup(ofToDataPath("mpe_client_settings.xml", false), true);
     gui.loadFromXML();
@@ -33,7 +38,7 @@ void testApp::draw(){
 
 	ofFill();
 	ofSetColor(0, 0, 128);
-	ofRect(0,0,10*integer1,ofGetHeight());
+	ofRect(0,0,(ofGetWidth()/42)*integer1,ofGetHeight());
 	
 	gui.draw();
 	
