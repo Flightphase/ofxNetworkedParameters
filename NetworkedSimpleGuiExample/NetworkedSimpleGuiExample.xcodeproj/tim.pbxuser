@@ -5,7 +5,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 16";
 		rLen = 0;
-		rLoc = 523;
+		rLoc = 533;
 		rType = 0;
 		vrLen = 928;
 		vrLoc = 0;
@@ -17,11 +17,6 @@
 		name = changelog.txt;
 		path = "/Developer/of-nmm/apps/ofxNetworkedParameters/example/addons/ofxMSAInteractiveObject/changelog.txt";
 		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1099, 488}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 443}";
-		};
 	};
 	221810DF13BD203200CECA49 /* ofRange.h */ = {
 		isa = PBXFileReference;
@@ -30,11 +25,6 @@
 		name = ofRange.h;
 		path = "/Developer/of-nmm/apps/ofxNetworkedParameters/example/addons/ofxRange/ofRange.h";
 		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1099, 660}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 550}";
-		};
 	};
 	221810E113BD203200CECA49 /* changelog.txt */ = {
 		isa = PBXFileReference;
@@ -43,17 +33,11 @@
 		name = changelog.txt;
 		path = "/Developer/of-nmm/apps/ofxNetworkedParameters/example/addons/ofxSimpleGuiToo/changelog.txt";
 		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1099, 488}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 865}";
-		};
 	};
-	2218112A13BD206000CECA49 /* XCBuildMessageTextBookmark */ = {
+	2218112A13BD206000CECA49 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		comments = "OfxNetworkedParameters.h: No such file or directory";
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
-		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
 		rLoc = 7;
 		rType = 1;
@@ -73,7 +57,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 16";
 		rLen = 0;
-		rLoc = 523;
+		rLoc = 533;
 		rType = 0;
 		vrLen = 928;
 		vrLoc = 0;
@@ -90,6 +74,7 @@
 	};
 	2218112F13BD206D00CECA49 /* ofxNetworkedParameters.cpp */ = {
 		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.cpp.cpp;
 		name = ofxNetworkedParameters.cpp;
 		path = "/Developer/of-nmm/addons/ofxNetworkedParameters/src/ofxNetworkedParameters.cpp";
 		sourceTree = "<absolute>";
@@ -136,9 +121,15 @@
 	};
 	2218113413BD206D00CECA49 /* ofxNetworkedParameters.cpp */ = {
 		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.cpp.cpp;
 		name = ofxNetworkedParameters.cpp;
 		path = "/Developer/of-nmm/apps/ofxNetworkedParameters/src/ofxNetworkedParameters.cpp";
 		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1099, 1845}}";
+			sepNavSelRange = "{1649, 0}";
+			sepNavVisRange = "{1315, 939}";
+		};
 	};
 	2218113513BD206D00CECA49 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -170,11 +161,10 @@
 		vrLen = 865;
 		vrLoc = 0;
 	};
-	2218113813BD206D00CECA49 /* XCBuildMessageTextBookmark */ = {
+	2218113813BD206D00CECA49 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		comments = "OfxNetworkedParameters.h: No such file or directory";
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
-		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
 		rLoc = 7;
 		rType = 1;
@@ -196,12 +186,226 @@
 			sepNavVisRange = "{0, 745}";
 		};
 	};
+	221811E113BD207A00CECA49 /* ofxNetworkedParameters.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1099, 2160}}";
+			sepNavSelRange = "{2257, 0}";
+			sepNavVisRange = "{1921, 1307}";
+		};
+	};
 	2218124113BD275200CECA49 /* changelog.txt */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1099, 488}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 443}";
 		};
+	};
+	2218125213BD275200CECA49 /* changelog.txt */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1099, 482}}";
+			sepNavSelRange = "{119, 0}";
+			sepNavVisRange = "{0, 865}";
+		};
+	};
+	2218125713BD275200CECA49 /* install.xml */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1099, 990}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1614}";
+		};
+	};
+	2218125813BD275200CECA49 /* LICENSE.txt */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1099, 510}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{73, 1807}";
+		};
+	};
+	2218127613BD275200CECA49 /* ofxSimpleGuiConfig.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1099, 1050}}";
+			sepNavSelRange = "{2507, 0}";
+			sepNavVisRange = "{1906, 757}";
+		};
+	};
+	2218127D13BD275200CECA49 /* ofxSimpleGuiToo.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1099, 6105}}";
+			sepNavSelRange = "{2694, 0}";
+			sepNavVisRange = "{2056, 677}";
+		};
+	};
+	2218127E13BD275200CECA49 /* ofxSimpleGuiToo.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1099, 2250}}";
+			sepNavSelRange = "{4742, 0}";
+			sepNavVisRange = "{2424, 1306}";
+		};
+	};
+	221812C313BD28EE00CECA49 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
+		name = "testApp.h: 16";
+		rLen = 0;
+		rLoc = 228;
+		rType = 0;
+		vrLen = 709;
+		vrLoc = 35;
+	};
+	221812CE13BD29F300CECA49 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'class ofxNetworkedParameters' has no member named 'setup'";
+		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 15;
+		rType = 1;
+	};
+	221812CF13BD29F300CECA49 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
+		name = "testApp.cpp: 16";
+		rLen = 0;
+		rLoc = 494;
+		rType = 0;
+		vrLen = 937;
+		vrLoc = 0;
+	};
+	221812DB13BD2AFF00CECA49 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
+		name = "testApp.h: 16";
+		rLen = 0;
+		rLoc = 228;
+		rType = 0;
+		vrLen = 709;
+		vrLoc = 35;
+	};
+	221812DC13BD2AFF00CECA49 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 221812DD13BD2AFF00CECA49 /* ofEventUtils.h */;
+		name = "ofEventUtils.h: 53";
+		rLen = 144;
+		rLoc = 1732;
+		rType = 0;
+		vrLen = 1328;
+		vrLoc = 1136;
+	};
+	221812DD13BD2AFF00CECA49 /* ofEventUtils.h */ = {
+		isa = PBXFileReference;
+		name = ofEventUtils.h;
+		path = "/Developer/of-nmm/libs/openFrameworks/events/ofEventUtils.h";
+		sourceTree = "<absolute>";
+	};
+	221812DE13BD2AFF00CECA49 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2218125713BD275200CECA49 /* install.xml */;
+		name = "install.xml: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1614;
+		vrLoc = 0;
+	};
+	221812DF13BD2AFF00CECA49 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2218125213BD275200CECA49 /* changelog.txt */;
+		name = "changelog.txt: 9";
+		rLen = 0;
+		rLoc = 119;
+		rType = 0;
+		vrLen = 865;
+		vrLoc = 0;
+	};
+	221812E013BD2AFF00CECA49 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2218125813BD275200CECA49 /* LICENSE.txt */;
+		name = "LICENSE.txt: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1807;
+		vrLoc = 73;
+	};
+	221812E113BD2AFF00CECA49 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2218127613BD275200CECA49 /* ofxSimpleGuiConfig.cpp */;
+		name = "ofxSimpleGuiConfig.cpp: 62";
+		rLen = 0;
+		rLoc = 2507;
+		rType = 0;
+		vrLen = 757;
+		vrLoc = 1906;
+	};
+	221812E213BD2AFF00CECA49 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2218127E13BD275200CECA49 /* ofxSimpleGuiToo.h */;
+		name = "ofxSimpleGuiToo.h: 130";
+		rLen = 0;
+		rLoc = 4742;
+		rType = 0;
+		vrLen = 1306;
+		vrLoc = 2424;
+	};
+	221812E313BD2AFF00CECA49 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2218127D13BD275200CECA49 /* ofxSimpleGuiToo.cpp */;
+		name = "ofxSimpleGuiToo.cpp: 73";
+		rLen = 0;
+		rLoc = 2694;
+		rType = 0;
+		vrLen = 677;
+		vrLoc = 2056;
+	};
+	221812E413BD2AFF00CECA49 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 221811E113BD207A00CECA49 /* ofxNetworkedParameters.h */;
+		name = "ofxNetworkedParameters.h: 108";
+		rLen = 0;
+		rLoc = 2257;
+		rType = 0;
+		vrLen = 1307;
+		vrLoc = 1921;
+	};
+	221812E513BD2AFF00CECA49 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
+		name = "testApp.cpp: 27";
+		rLen = 0;
+		rLoc = 798;
+		rType = 0;
+		vrLen = 918;
+		vrLoc = 0;
+	};
+	221812E613BD2AFF00CECA49 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2218113413BD206D00CECA49 /* ofxNetworkedParameters.cpp */;
+		name = "ofxNetworkedParameters.cpp: 36";
+		rLen = 0;
+		rLoc = 825;
+		rType = 0;
+		vrLen = 1062;
+		vrLoc = 391;
+	};
+	221812E713BD2AFF00CECA49 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2218113413BD206D00CECA49 /* ofxNetworkedParameters.cpp */;
+		name = "ofxNetworkedParameters.cpp: 58";
+		rLen = 0;
+		rLoc = 1649;
+		rType = 0;
+		vrLen = 887;
+		vrLoc = 1315;
+	};
+	221812EB13BD2B0700CECA49 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2218113413BD206D00CECA49 /* ofxNetworkedParameters.cpp */;
+		name = "ofxNetworkedParameters.cpp: 58";
+		rLen = 0;
+		rLoc = 1649;
+		rType = 0;
+		vrLen = 939;
+		vrLoc = 1315;
 	};
 	226658E813BB5A3800E9EBB8 /* mpeServerTCP.cpp */ = {
 		isa = PBXFileReference;
@@ -210,11 +414,6 @@
 		name = mpeServerTCP.cpp;
 		path = "/Developer/of-nmm/addons/ofxMostPixelsEver/src/mpeServerTCP.cpp";
 		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1099, 4845}}";
-			sepNavSelRange = "{4057, 0}";
-			sepNavVisRange = "{3769, 833}";
-		};
 	};
 	2266590913BB5A3800E9EBB8 /* changelog.txt */ = {
 		isa = PBXFileReference;
@@ -223,11 +422,6 @@
 		name = changelog.txt;
 		path = "/Developer/of-nmm/addons/ofxSimpleGuiToo/changelog.txt";
 		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1099, 488}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 865}";
-		};
 	};
 	2266590E13BB5A3800E9EBB8 /* install.xml */ = {
 		isa = PBXFileReference;
@@ -236,11 +430,6 @@
 		name = install.xml;
 		path = "/Developer/of-nmm/addons/ofxSimpleGuiToo/install.xml";
 		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1099, 990}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1614}";
-		};
 	};
 	2266590F13BB5A3800E9EBB8 /* LICENSE.txt */ = {
 		isa = PBXFileReference;
@@ -249,11 +438,6 @@
 		name = LICENSE.txt;
 		path = "/Developer/of-nmm/addons/ofxSimpleGuiToo/LICENSE.txt";
 		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1099, 510}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1804}";
-		};
 	};
 	2266593713BB5A3800E9EBB8 /* install.xml */ = {
 		uiCtxt = {
@@ -311,16 +495,16 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 22F9A22613BCB5D2003E0220 /* ofxNetworkedParameters.h */;
+		fileReference = 221811E113BD207A00CECA49 /* ofxNetworkedParameters.h */;
 		functionName = "set(int _val)";
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 82;
-		modificationTime = 331160479.72027;
+		modificationTime = 331163881.568995;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
-	22665AEC13BB77A500E9EBB8 /* ofxNetworkedParameters.cpp:85 */ = {
+	22665AEC13BB77A500E9EBB8 /* ofxNetworkedParameters.cpp:97 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -328,13 +512,13 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 22F9A22513BCB5D2003E0220 /* ofxNetworkedParameters.cpp */;
+		fileReference = 221811E013BD207A00CECA49 /* ofxNetworkedParameters.cpp */;
 		functionName = "ofxNetworkedParameter::mpeFrameEvent(ofxMPEEventArgs& eventArgs)";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 85;
+		lineNumber = 97;
 		location = emptyExampleDebug;
-		modificationTime = 331160479.720485;
+		modificationTime = 331163881.569222;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -346,12 +530,12 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 22F9A22613BCB5D2003E0220 /* ofxNetworkedParameters.h */;
+		fileReference = 221811E113BD207A00CECA49 /* ofxNetworkedParameters.h */;
 		functionName = "addNetworkedParameter(string _name, int * _p)";
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 94;
-		modificationTime = 331160479.720566;
+		modificationTime = 331163881.569297;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -411,12 +595,12 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 22F9A22613BCB5D2003E0220 /* ofxNetworkedParameters.h */;
+		fileReference = 221811E113BD207A00CECA49 /* ofxNetworkedParameters.h */;
 		functionName = "netParameter(void * _p, string _isA)";
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 82;
-		modificationTime = 331160479.720613;
+		modificationTime = 331163881.56934;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -467,7 +651,7 @@
 		vrLen = 666;
 		vrLoc = 1197;
 	};
-	22665BAB13BB893B00E9EBB8 /* ofxNetworkedParameters.cpp:57 */ = {
+	22665BAB13BB893B00E9EBB8 /* ofxNetworkedParameters.cpp:69 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -475,13 +659,13 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 22F9A22513BCB5D2003E0220 /* ofxNetworkedParameters.cpp */;
+		fileReference = 221811E013BD207A00CECA49 /* ofxNetworkedParameters.cpp */;
 		functionName = "ofxNetworkedParameter::update()";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 57;
+		lineNumber = 69;
 		location = emptyExampleDebug;
-		modificationTime = 331160479.720661;
+		modificationTime = 331163881.569385;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -677,7 +861,7 @@
 		path = "/Developer/of-nmm/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQuickTimeGrabber.cpp";
 		sourceTree = "<absolute>";
 	};
-	22F9A0C213BC8A4C003E0220 /* ofxNetworkedParameters.cpp:74 */ = {
+	22F9A0C213BC8A4C003E0220 /* ofxNetworkedParameters.cpp:86 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -685,13 +869,13 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = 22F9A22513BCB5D2003E0220 /* ofxNetworkedParameters.cpp */;
+		fileReference = 221811E013BD207A00CECA49 /* ofxNetworkedParameters.cpp */;
 		functionName = "ofxNetworkedParameter::mpeFrameEvent(ofxMPEEventArgs& eventArgs)";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 74;
+		lineNumber = 86;
 		location = emptyExampleDebug;
-		modificationTime = 331160479.7207049;
+		modificationTime = 331163881.569425;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -705,14 +889,6 @@
 		vrLen = 833;
 		vrLoc = 3769;
 	};
-	22F9A22513BCB5D2003E0220 /* ofxNetworkedParameters.cpp */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.cpp.cpp;
-		name = ofxNetworkedParameters.cpp;
-		path = "/Developer/of-nmm/apps/ofxNetworkedParameters/src/ofxNetworkedParameters.cpp";
-		sourceTree = "<absolute>";
-	};
 	22F9A22613BCB5D2003E0220 /* ofxNetworkedParameters.h */ = {
 		isa = PBXFileReference;
 		fileEncoding = 4;
@@ -720,17 +896,12 @@
 		name = ofxNetworkedParameters.h;
 		path = "/Developer/of-nmm/apps/ofxNetworkedParameters/src/ofxNetworkedParameters.h";
 		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1099, 2145}}";
-			sepNavSelRange = "{1874, 5}";
-			sepNavVisRange = "{1638, 1432}";
-		};
 	};
 	22F9A2B113BCF435003E0220 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 22F9A22613BCB5D2003E0220 /* ofxNetworkedParameters.h */;
 		name = "ofxNetworkedParameters.h: 96";
-		rLen = 5;
+		rLen = 0;
 		rLoc = 1874;
 		rType = 0;
 		vrLen = 1432;
@@ -751,7 +922,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 16";
 		rLen = 24;
-		rLoc = 545;
+		rLoc = 555;
 		rType = 0;
 		vrLen = 921;
 		vrLoc = 0;
@@ -761,7 +932,7 @@
 		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
 		name = "testApp.cpp: 16";
 		rLen = 0;
-		rLoc = 523;
+		rLoc = 533;
 		rType = 0;
 		vrLen = 939;
 		vrLoc = 0;
@@ -775,11 +946,11 @@
 		);
 		breakpoints = (
 			22665AE813BB777C00E9EBB8 /* ofxNetworkedParameters.h:82 */,
-			22665AEC13BB77A500E9EBB8 /* ofxNetworkedParameters.cpp:85 */,
+			22665AEC13BB77A500E9EBB8 /* ofxNetworkedParameters.cpp:97 */,
 			22665AF213BB785500E9EBB8 /* ofxNetworkedParameters.h:94 */,
 			22665B1813BB7A7F00E9EBB8 /* ofxNetworkedParameters.h:82 */,
-			22665BAB13BB893B00E9EBB8 /* ofxNetworkedParameters.cpp:57 */,
-			22F9A0C213BC8A4C003E0220 /* ofxNetworkedParameters.cpp:74 */,
+			22665BAB13BB893B00E9EBB8 /* ofxNetworkedParameters.cpp:69 */,
+			22F9A0C213BC8A4C003E0220 /* ofxNetworkedParameters.cpp:86 */,
 		);
 		codeSenseManager = 22D15D4E137DB83000BE7CCC /* Code sense */;
 		executables = (
@@ -813,24 +984,40 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 331161120;
-			PBXWorkspaceStateSaveDate = 331161120;
+			PBXPerProjectTemplateStateSaveDate = 331163881;
+			PBXWorkspaceStateSaveDate = 331163881;
 		};
 		perUserProjectItems = {
 			2218109713BD1BA400CECA49 = 2218109713BD1BA400CECA49 /* PBXTextBookmark */;
-			2218112A13BD206000CECA49 /* XCBuildMessageTextBookmark */ = 2218112A13BD206000CECA49 /* XCBuildMessageTextBookmark */;
-			2218112B13BD206000CECA49 /* PBXTextBookmark */ = 2218112B13BD206000CECA49 /* PBXTextBookmark */;
-			2218112D13BD206D00CECA49 /* PBXTextBookmark */ = 2218112D13BD206D00CECA49 /* PBXTextBookmark */;
-			2218112E13BD206D00CECA49 /* PBXTextBookmark */ = 2218112E13BD206D00CECA49 /* PBXTextBookmark */;
-			2218113013BD206D00CECA49 /* PBXTextBookmark */ = 2218113013BD206D00CECA49 /* PBXTextBookmark */;
-			2218113113BD206D00CECA49 /* PBXTextBookmark */ = 2218113113BD206D00CECA49 /* PBXTextBookmark */;
-			2218113213BD206D00CECA49 /* PBXTextBookmark */ = 2218113213BD206D00CECA49 /* PBXTextBookmark */;
-			2218113313BD206D00CECA49 /* PBXTextBookmark */ = 2218113313BD206D00CECA49 /* PBXTextBookmark */;
-			2218113513BD206D00CECA49 /* PBXTextBookmark */ = 2218113513BD206D00CECA49 /* PBXTextBookmark */;
-			2218113613BD206D00CECA49 /* PBXTextBookmark */ = 2218113613BD206D00CECA49 /* PBXTextBookmark */;
-			2218113713BD206D00CECA49 /* PBXTextBookmark */ = 2218113713BD206D00CECA49 /* PBXTextBookmark */;
-			2218113813BD206D00CECA49 /* XCBuildMessageTextBookmark */ = 2218113813BD206D00CECA49 /* XCBuildMessageTextBookmark */;
-			2218113913BD206D00CECA49 /* PBXTextBookmark */ = 2218113913BD206D00CECA49 /* PBXTextBookmark */;
+			2218112A13BD206000CECA49 = 2218112A13BD206000CECA49 /* PBXTextBookmark */;
+			2218112B13BD206000CECA49 = 2218112B13BD206000CECA49 /* PBXTextBookmark */;
+			2218112D13BD206D00CECA49 = 2218112D13BD206D00CECA49 /* PBXTextBookmark */;
+			2218112E13BD206D00CECA49 = 2218112E13BD206D00CECA49 /* PBXTextBookmark */;
+			2218113013BD206D00CECA49 = 2218113013BD206D00CECA49 /* PBXTextBookmark */;
+			2218113113BD206D00CECA49 = 2218113113BD206D00CECA49 /* PBXTextBookmark */;
+			2218113213BD206D00CECA49 = 2218113213BD206D00CECA49 /* PBXTextBookmark */;
+			2218113313BD206D00CECA49 = 2218113313BD206D00CECA49 /* PBXTextBookmark */;
+			2218113513BD206D00CECA49 = 2218113513BD206D00CECA49 /* PBXTextBookmark */;
+			2218113613BD206D00CECA49 = 2218113613BD206D00CECA49 /* PBXTextBookmark */;
+			2218113713BD206D00CECA49 = 2218113713BD206D00CECA49 /* PBXTextBookmark */;
+			2218113813BD206D00CECA49 = 2218113813BD206D00CECA49 /* PBXTextBookmark */;
+			2218113913BD206D00CECA49 = 2218113913BD206D00CECA49 /* PBXTextBookmark */;
+			221812C313BD28EE00CECA49 /* PBXTextBookmark */ = 221812C313BD28EE00CECA49 /* PBXTextBookmark */;
+			221812CE13BD29F300CECA49 /* XCBuildMessageTextBookmark */ = 221812CE13BD29F300CECA49 /* XCBuildMessageTextBookmark */;
+			221812CF13BD29F300CECA49 /* PBXTextBookmark */ = 221812CF13BD29F300CECA49 /* PBXTextBookmark */;
+			221812DB13BD2AFF00CECA49 /* PBXTextBookmark */ = 221812DB13BD2AFF00CECA49 /* PBXTextBookmark */;
+			221812DC13BD2AFF00CECA49 /* PBXTextBookmark */ = 221812DC13BD2AFF00CECA49 /* PBXTextBookmark */;
+			221812DE13BD2AFF00CECA49 /* PBXTextBookmark */ = 221812DE13BD2AFF00CECA49 /* PBXTextBookmark */;
+			221812DF13BD2AFF00CECA49 /* PBXTextBookmark */ = 221812DF13BD2AFF00CECA49 /* PBXTextBookmark */;
+			221812E013BD2AFF00CECA49 /* PBXTextBookmark */ = 221812E013BD2AFF00CECA49 /* PBXTextBookmark */;
+			221812E113BD2AFF00CECA49 /* PBXTextBookmark */ = 221812E113BD2AFF00CECA49 /* PBXTextBookmark */;
+			221812E213BD2AFF00CECA49 /* PBXTextBookmark */ = 221812E213BD2AFF00CECA49 /* PBXTextBookmark */;
+			221812E313BD2AFF00CECA49 /* PBXTextBookmark */ = 221812E313BD2AFF00CECA49 /* PBXTextBookmark */;
+			221812E413BD2AFF00CECA49 /* PBXTextBookmark */ = 221812E413BD2AFF00CECA49 /* PBXTextBookmark */;
+			221812E513BD2AFF00CECA49 /* PBXTextBookmark */ = 221812E513BD2AFF00CECA49 /* PBXTextBookmark */;
+			221812E613BD2AFF00CECA49 /* PBXTextBookmark */ = 221812E613BD2AFF00CECA49 /* PBXTextBookmark */;
+			221812E713BD2AFF00CECA49 /* PBXTextBookmark */ = 221812E713BD2AFF00CECA49 /* PBXTextBookmark */;
+			221812EB13BD2B0700CECA49 /* PBXTextBookmark */ = 221812EB13BD2B0700CECA49 /* PBXTextBookmark */;
 			22665A5913BB733600E9EBB8 = 22665A5913BB733600E9EBB8 /* PBXTextBookmark */;
 			22665AB713BB763500E9EBB8 = 22665AB713BB763500E9EBB8 /* PBXTextBookmark */;
 			22665AFC13BB785E00E9EBB8 = 22665AFC13BB785E00E9EBB8 /* PBXTextBookmark */;
@@ -873,17 +1060,17 @@
 	};
 	E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1099, 1185}}";
-			sepNavSelRange = "{523, 0}";
-			sepNavVisRange = "{0, 928}";
+			sepNavIntBoundsRect = "{{0, 0}, {1099, 1170}}";
+			sepNavSelRange = "{798, 0}";
+			sepNavVisRange = "{0, 918}";
 			sepNavWindowFrame = "{{15, 54}, {1188, 819}}";
 		};
 	};
 	E4B69E1F0A3A1BDC003C02F2 /* testApp.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1099, 555}}";
-			sepNavSelRange = "{99, 0}";
-			sepNavVisRange = "{34, 710}";
+			sepNavSelRange = "{228, 0}";
+			sepNavVisRange = "{35, 709}";
 		};
 	};
 }

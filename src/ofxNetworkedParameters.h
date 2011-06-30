@@ -93,9 +93,10 @@ public:
 	void addNetworkedParameter(string _name, float * _p);
 	void addNetworkedParameter(string _name, bool * _p);
 
-    void setup(){ofAddListener(ofxMPEEvents.mpeMessage, this, &ofxNetworkedParameters::mpeMessageEvent);};
+    void attachToNetwork();
+	void detachFromNetwork();
 
-	void update();
+	void update(ofEventArgs& args);
 	void setMPEClient(mpeClientTCP* client);
 
 #ifdef USE_NETWORKEDSIMPLEGUITOO

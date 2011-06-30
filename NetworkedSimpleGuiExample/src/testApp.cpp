@@ -13,7 +13,7 @@ void testApp::setup(){
 	testPage.addSlider("Float1", float1, -42.0, 42.0);
 	testPage.addSlider("Integer1", integer1, 0, 42);
 
-	networkedParameters.setup();
+	networkedParameters.attachToNetwork();
 	networkedParameters.shareOfxSimpleGuiTooPage(gui.page("testPage"));
 	networkedParameters.setMPEClient(client);
 	
@@ -24,7 +24,7 @@ void testApp::setup(){
 
 //--------------------------------------------------------------
 void testApp::update(){
-	networkedParameters.update();
+	// networkedParameters.update();
 }
 
 //--------------------------------------------------------------

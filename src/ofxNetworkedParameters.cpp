@@ -26,6 +26,18 @@ ofxNetworkedParameters::~ofxNetworkedParameters(){
 	}
 
 }
+
+void ofxNetworkedParameters::attachToNetwork(){
+	ofAddListener(ofxMPEEvents.mpeMessage, this, &ofxNetworkedParameters::mpeMessageEvent);
+	ofAddListener(ofEvents.update, this, &ofxNetworkedParameters::update);
+}
+
+void ofxNetworkedParameters::detachFromNetwork(){
+	ofRemoveListener(ofEvents.update, this, &ofxNetworkedParameters::update);
+	ofRemoveListener(ofxMPEEvents.mpeMessage, this, &ofxNetworkedParameters::mpeMessageEvent);
+}
+
+
 //--------------------------------------------------------------
 
 void ofxNetworkedParameters::addNetworkedParameter(string _name, int * _p){
@@ -40,7 +52,7 @@ void ofxNetworkedParameters::addNetworkedParameter(string _name, bool * _p){
 
 //--------------------------------------------------------------
 
-void ofxNetworkedParameters::update(){
+void ofxNetworkedParameters::update(ofEventArgs& args){
 	map<string, sharedParameter*>::iterator param = parameterList.begin();
 
 	while (param != parameterList.end()) {
