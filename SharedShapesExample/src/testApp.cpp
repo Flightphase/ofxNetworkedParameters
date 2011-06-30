@@ -2,29 +2,31 @@
 
 //--------------------------------------------------------------
 void testApp::setup(){
+	ofSetFrameRate(30);
+	ofSetVerticalSync(true);
+	
 	client = new mpeClientTCP();
 	client->setup(ofToDataPath("mpe_client_settings.xml", false), true);
-    gui.loadFromXML();
-	gui.setDefaultKeys(true);
-	
-	ofxSimpleGuiPage& testPage = gui.addPage("testPage");
-	testPage.addToggle("Bool1", bool1);
-	testPage.addToggle("Bool2", bool2);
-	testPage.addSlider("Float1", float1, -42.0, 42.0);
-	testPage.addSlider("Integer1", integer1, 0, 42);
 
-	networkedParameters.setup();
-	networkedParameters.shareOfxSimpleGuiTooPage(gui.page("testPage"));
+	networkedParameters.attachToNetwork();
 	networkedParameters.setMPEClient(client);
+	
 	
 	// client->useSimulationMode(2);
 	client->start();
+	
+	for (int i = 0; i<9; i++) {
+		isLarge[i] = false;
+		
+		networkedParameters.addNetworkedParameter("bool_" + ofToString(i), &isLarge[i]);
+		
+	}
 	
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
-	networkedParameters.update();
+	isLarge[5] = false;
 }
 
 //--------------------------------------------------------------
@@ -32,10 +34,14 @@ void testApp::draw(){
 	ofClear(0, 0, 0, 1);
 
 	ofFill();
-	ofSetColor(0, 0, 128);
-	ofRect(0,0,10*integer1,ofGetHeight());
+
+	for (int i = 0; i<9; i++) {
+
+		ofSetColor(255, (isLarge[i]==true ? 255 : 0), 0);
+		ofCircle(100 + (i%3)*200, 100 + (i/3)*200, 20 + (isLarge[i]==true ? 50 : 0));
+		
+	}
 	
-	gui.draw();
 	
 }
 
@@ -59,12 +65,27 @@ void testApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void testApp::mousePressed(int x, int y, int button){
-
 }
 
 //--------------------------------------------------------------
 void testApp::mouseReleased(int x, int y, int button){
-
+	int closest = 0; 
+	float closestDistance = 1000000;
+	
+	for (int i = 0; i<9; i++){
+		
+		float distance = ofVec2f(100 + (i%3)*200, 100 + (i/3)*200).distance(ofVec2f(x,y));
+		
+		if ( distance < closestDistance){
+			closestDistance = distance;
+			closest	 = i;
+			
+			cout << distance << endl;
+		}
+	}
+	
+	isLarge[closest] ^= true;
+	
 }
 
 //--------------------------------------------------------------

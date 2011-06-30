@@ -2,9 +2,7 @@
 
 #include "ofMain.h"
 
-#include "ofxSimpleGuiToo.h"
-
-#define USE_NETWORKEDSIMPLEGUITOO
+// #define USE_NETWORKEDSIMPLEGUITOO
 #include "ofxNetworkedParameters.h"
 
 
@@ -32,5 +30,8 @@ class testApp : public ofBaseApp{
 	bool bool1, bool2;
 	int integer1;
 	float float1;
+	
+	bool isLarge[9];
+	
 	
 };
