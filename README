@@ -10,7 +10,7 @@
  * We've included 3 little examples:
  * SimpleExample -- simplest example networking a boolean to change the background color 
  * SharedShapesExample -- fun example toggling a grid of shapes 
- * NetworkedSimpleGuiExample -- example showing how to instantly network synchronize ofxSimpleGuiToo, across the network 
+ * NetworkedSimpleGuiExample -- example showing how to instantly synchronize ofxSimpleGuiToo across the network 
  *
  *
  * Requires the Flightphase Most Pixels Ever version, which is packaged in this repo, but is also available here:
