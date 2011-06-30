@@ -26,7 +26,7 @@ void testApp::setup(){
 
 //--------------------------------------------------------------
 void testApp::update(){
-	isLarge[5] = false;
+
 }
 
 //--------------------------------------------------------------
@@ -79,8 +79,6 @@ void testApp::mouseReleased(int x, int y, int button){
 		if ( distance < closestDistance){
 			closestDistance = distance;
 			closest	 = i;
-			
-			cout << distance << endl;
 		}
 	}
 	
