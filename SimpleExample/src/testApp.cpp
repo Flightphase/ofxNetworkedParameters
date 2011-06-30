@@ -2,45 +2,40 @@
 
 //--------------------------------------------------------------
 void testApp::setup(){
+	
+	ofBackground(0);
+	ofSetVerticalSync(true);
+	ofSetFrameRate(30);
+	
 	client = new mpeClientTCP();
-	client->setup(ofToDataPath("mpe_client_settings.xml", false), true);
-    gui.loadFromXML();
-	gui.setDefaultKeys(true);
-	
-	ofxSimpleGuiPage& testPage = gui.addPage("testPage");
-	testPage.addToggle("Bool1", bool1);
-	testPage.addToggle("Bool2", bool2);
-	testPage.addSlider("Float1", float1, -42.0, 42.0);
-	testPage.addSlider("Integer1", integer1, 0, 42);
-
-	networkedParameters.setup();
-	networkedParameters.shareOfxSimpleGuiTooPage(gui.page("testPage"));
-	networkedParameters.setMPEClient(client);
-	
-	// client->useSimulationMode(2);
+	client->setup("mpe_client_settings.xml", true);
 	client->start();
 	
+	backgroundWhite = false;
+	networkedParameters.addNetworkedParameter("background", &backgroundWhite);
+
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
-	networkedParameters.update();
+
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
-	ofClear(0, 0, 0, 1);
 
-	ofFill();
-	ofSetColor(0, 0, 128);
-	ofRect(0,0,10*integer1,ofGetHeight());
-	
-	gui.draw();
-	
+	if(backgroundWhite){
+		ofBackground(255, 200, 10);
+	}
+	else{
+		ofBackground(0, 250, 100);
+	}
+		
 }
 
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
+	
 }
 
 //--------------------------------------------------------------
@@ -59,7 +54,8 @@ void testApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void testApp::mousePressed(int x, int y, int button){
-
+	backgroundWhite = !backgroundWhite;
+	
 }
 
 //--------------------------------------------------------------
