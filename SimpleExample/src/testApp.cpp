@@ -12,8 +12,9 @@ void testApp::setup(){
 	client->start();
 	
 	backgroundWhite = false;
+	networkedParameters.setMPEClient(client);
 	networkedParameters.addNetworkedParameter("background", &backgroundWhite);
-
+	networkedParameters.attachToNetwork();
 }
 
 //--------------------------------------------------------------

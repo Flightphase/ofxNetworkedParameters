@@ -7,7 +7,7 @@
 int main( ){
 	
 	ofAppBaseWindow* pWindow = new ofAppGlutWindow();
-	ofSetupOpenGL(pWindow, 600,320, OF_FULLSCREEN);			// <-------- setup the GL context
+	ofSetupOpenGL(pWindow, 600,320, OF_WINDOW);			// <-------- setup the GL context
 	
 	ofSetLogLevel(OF_LOG_NOTICE);
 	

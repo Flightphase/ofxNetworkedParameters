@@ -1,4 +1,3 @@
-MPEServer/
 /*.dll
 /*.exe
 .DS_Store
@@ -7,3 +6,6 @@ build/
 *.pbxuser
 *.mode1v3
 *.perspectivev3
+
+MPEServer/
+bin copy/

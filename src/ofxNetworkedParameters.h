@@ -16,24 +16,25 @@
 #include "ofxSimpleGuiToo.h"
 #endif
 
-class sharedParameter {
+class NetworkedParameter {
     public:
 	void * p;
 	string isA;
-
+	
 	union paramU {
 		bool b;
 		int  i;
 		float f;
 	} lastValue;
 
-	sharedParameter(void * _p, string _isA){
+	NetworkedParameter(void * _p, string _isA){
 		p = _p;
 		isA = _isA;
 
 		update();
 	}
 
+		
 	bool hasChanged(){
 		if (isA=="bool") {
 			return (lastValue.b != *(bool *)p);
@@ -128,7 +129,7 @@ public:
 
 
 private:
-	map<string, sharedParameter *> parameterList;
+	map<string, NetworkedParameter *> parameterList;
 	void mpeMessageEvent(ofxMPEEventArgs& eventArgs);
 	mpeClientTCP* client;
 

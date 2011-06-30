@@ -19,7 +19,7 @@ ofxNetworkedParameters::ofxNetworkedParameters(){
 //--------------------------------------------------------------
 
 ofxNetworkedParameters::~ofxNetworkedParameters(){
-	map<string, sharedParameter*>::iterator param = parameterList.begin();
+	map<string, NetworkedParameter*>::iterator param = parameterList.begin();
 
 	while (param != parameterList.end()) {
 		delete param->second;
@@ -42,19 +42,19 @@ void ofxNetworkedParameters::detachFromNetwork(){
 //--------------------------------------------------------------
 
 void ofxNetworkedParameters::addNetworkedParameter(string _name, int * _p){
-	parameterList[_name] = new sharedParameter(_p, "int");
+	parameterList[_name] = new NetworkedParameter(_p, "int");
 }
 void ofxNetworkedParameters::addNetworkedParameter(string _name, float * _p){
-	parameterList[_name] = new sharedParameter(_p, "float");
+	parameterList[_name] = new NetworkedParameter(_p, "float");
 }
 void ofxNetworkedParameters::addNetworkedParameter(string _name, bool * _p){
-	parameterList[_name] = new sharedParameter(_p, "bool");
+	parameterList[_name] = new NetworkedParameter(_p, "bool");
 }
 
 //--------------------------------------------------------------
 
 void ofxNetworkedParameters::update(ofEventArgs& args){
-	map<string, sharedParameter*>::iterator param = parameterList.begin();
+	map<string, NetworkedParameter*>::iterator param = parameterList.begin();
 
 	while (param != parameterList.end()) {
 		if (param->second->hasChanged()){
@@ -87,7 +87,7 @@ void ofxNetworkedParameters::mpeMessageEvent(ofxMPEEventArgs& eventArgs){
 	
 	if (msg.size() == 4 && msg[0]=="nP") {
 
-		map<string, sharedParameter*>::iterator param = parameterList.find(msg[1]);
+		map<string, NetworkedParameter*>::iterator param = parameterList.find(msg[1]);
 
 		ofLog(OF_LOG_NOTICE, "ofxNetworkedParameters: Setting parameter " + msg[1] + " to " + ofToString(msg[3]));
 
