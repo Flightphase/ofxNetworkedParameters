@@ -1,51 +1,53 @@
 #include "testApp.h"
-
+#include "ofxNPSimpleGuiBridge.h"
 //--------------------------------------------------------------
 void testApp::setup(){
 	
-	ofSetVerticalSync(true);
 	ofSetFrameRate(30);
-	ofClear(0, 0, 0, 1);
+	
+	bool1 = bool2 = false;
+	integer1 = float1 = 0;
 	
 	client = new mpeClientTCP();
 	client->setup(ofToDataPath("mpe_client_settings.xml", false), true);
-    gui.loadFromXML();
-	gui.setDefaultKeys(true);
+	ofxNetworkedParameters.setMPEClient(client);
+	
 	
 	ofxSimpleGuiPage& testPage = gui.addPage("testPage");
 	testPage.addToggle("Bool1", bool1);
 	testPage.addToggle("Bool2", bool2);
 	testPage.addSlider("Float1", float1, -42.0, 42.0);
 	testPage.addSlider("Integer1", integer1, 0, 42);
+	NetworkSimpleGuiPage(gui.page("testPage"));
 
-	networkedParameters.attachToNetwork();
-	networkedParameters.shareOfxSimpleGuiTooPage(gui.page("testPage"));
-	networkedParameters.setMPEClient(client);
-	
+	ofxNetworkedParameters.attachToNetwork();
+						 
 	// client->useSimulationMode(2);
 	client->start();
-	
+
+	gui.toggleDraw();
+
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
-	// networkedParameters.update();
+
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
-	ofClear(0, 0, 0, 1);
+	ofBackground(0, 0, 0);
 
 	ofFill();
 	ofSetColor(0, 0, 128);
 	ofRect(0,0,(ofGetWidth()/42)*integer1,ofGetHeight());
 	
-	gui.draw();
-	
+	gui.draw(); 
 }
 
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
+
 }
 
 //--------------------------------------------------------------

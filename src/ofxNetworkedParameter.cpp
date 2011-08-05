@@ -32,38 +32,44 @@
  *
  */
 
-#pragma once
-
-#include "ofMain.h"
-#include "ofxMostPixelsEver.h"
 #include "ofxNetworkedParameter.h"
 
-#ifdef USE_NETWORKEDSIMPLEGUITOO
-#include "ofxSimpleGuiToo.h"
-#endif
+ofxNetworkedParameter::ofxNetworkedParameter(void * _p, string _isA){
+	p = _p;
+	isA = _isA;
 
-class ofxNetworkedParametersHandler {
-  public:
-	ofxNetworkedParametersHandler();
-	~ofxNetworkedParametersHandler();
+	update();
+}
 
-	void setMPEClient(mpeClientTCP* client);
+bool ofxNetworkedParameter::hasChanged(){
+	if (isA=="bool") {
+		return (lastValue.b != *(bool *)p);
+	} else if (isA=="int"){
+		return (lastValue.i != *(int *)p);
+	} else if (isA=="float"){
+		return (lastValue.f != *(float *)p);
+	}
+}
 
-	void addNetworkedParameter(string _name, int * _p);
-	void addNetworkedParameter(string _name, float * _p);
-	void addNetworkedParameter(string _name, bool * _p);
+void ofxNetworkedParameter::update(){
+	if (isA=="bool")
+		lastValue.b = *(bool *)p;
+	else if (isA=="int")
+		lastValue.i = *(int *)p;
+	else if (isA=="float")
+		lastValue.f = *(float *)p;
+}
 
-    void attachToNetwork();
-	void detachFromNetwork();
-
-  private:
-	void update(ofEventArgs& args);
-	map<string, ofxNetworkedParameter *> parameterList;
-	void mpeMessageEvent(ofxMPEEventArgs& eventArgs);
-	mpeClientTCP* client;
-
-};
-
-// declare an external networkedParameters object, similar to ofxSimpleGuiToo
-extern ofxNetworkedParametersHandler ofxNetworkedParameters;
-
+string ofxNetworkedParameter::serialize(){
+	string s;
+	s = isA + "|";
+	
+	if (isA=="bool")
+		s += ofToString(*(bool *)p);
+	else if (isA=="int")
+		s += ofToString(*(int *)p);
+	else if (isA=="float")
+		s += ofToString(*(float *)p);
+	
+	return s;
+}

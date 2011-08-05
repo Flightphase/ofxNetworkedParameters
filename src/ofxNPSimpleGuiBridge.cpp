@@ -32,38 +32,6 @@
  *
  */
 
-#pragma once
+#include "ofxNPSimpleGuiBridge.h"
 
-#include "ofMain.h"
-#include "ofxMostPixelsEver.h"
-#include "ofxNetworkedParameter.h"
-
-#ifdef USE_NETWORKEDSIMPLEGUITOO
-#include "ofxSimpleGuiToo.h"
-#endif
-
-class ofxNetworkedParametersHandler {
-  public:
-	ofxNetworkedParametersHandler();
-	~ofxNetworkedParametersHandler();
-
-	void setMPEClient(mpeClientTCP* client);
-
-	void addNetworkedParameter(string _name, int * _p);
-	void addNetworkedParameter(string _name, float * _p);
-	void addNetworkedParameter(string _name, bool * _p);
-
-    void attachToNetwork();
-	void detachFromNetwork();
-
-  private:
-	void update(ofEventArgs& args);
-	map<string, ofxNetworkedParameter *> parameterList;
-	void mpeMessageEvent(ofxMPEEventArgs& eventArgs);
-	mpeClientTCP* client;
-
-};
-
-// declare an external networkedParameters object, similar to ofxSimpleGuiToo
-extern ofxNetworkedParametersHandler ofxNetworkedParameters;
 

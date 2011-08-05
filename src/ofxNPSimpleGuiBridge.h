@@ -31,39 +31,37 @@
  * synchronized with Most Pixels Ever.
  *
  */
+////////////
+//IMPORANT//
+////////////
+//You only need to include this if you are working with netowrking ofxSimpleGuiToo
+//otherwise you dont' need it
+//a compatible version of ofxSimpleGuiToo can always be found here:
+//https://github.com/Flightphase/ofxSimpleGuiToo
 
 #pragma once
 
 #include "ofMain.h"
-#include "ofxMostPixelsEver.h"
-#include "ofxNetworkedParameter.h"
-
-#ifdef USE_NETWORKEDSIMPLEGUITOO
 #include "ofxSimpleGuiToo.h"
-#endif
+#include "ofxNetworkedParameters.h"
 
-class ofxNetworkedParametersHandler {
-  public:
-	ofxNetworkedParametersHandler();
-	~ofxNetworkedParametersHandler();
-
-	void setMPEClient(mpeClientTCP* client);
-
-	void addNetworkedParameter(string _name, int * _p);
-	void addNetworkedParameter(string _name, float * _p);
-	void addNetworkedParameter(string _name, bool * _p);
-
-    void attachToNetwork();
-	void detachFromNetwork();
-
-  private:
-	void update(ofEventArgs& args);
-	map<string, ofxNetworkedParameter *> parameterList;
-	void mpeMessageEvent(ofxMPEEventArgs& eventArgs);
-	mpeClientTCP* client;
-
-};
-
-// declare an external networkedParameters object, similar to ofxSimpleGuiToo
-extern ofxNetworkedParametersHandler ofxNetworkedParameters;
-
+static void NetworkSimpleGuiPage(ofxSimpleGuiPage& guiPage){
+	for (int i = 0; i < guiPage.getControls().size(); i++){
+		string controlType = (guiPage.getControls())[i]->controlType;
+		string pageName = guiPage.key + "_";
+		
+		if (controlType == "Toggle") {
+			ofLog(OF_LOG_NOTICE, "Sharing Toggle parameter: " + (guiPage.getControls())[i]->key);
+			ofxNetworkedParameters.addNetworkedParameter(pageName + (guiPage.getControls())[i]->key,
+								  ((ofxSimpleGuiToggle *)((guiPage.getControls())[i]))->value);
+		} else if (controlType == "SliderInt") {
+			ofLog(OF_LOG_NOTICE, "Sharing SliderInt parameter: " + (guiPage.getControls())[i]->key);
+			ofxNetworkedParameters.addNetworkedParameter(pageName + (guiPage.getControls())[i]->key,
+								  ((ofxSimpleGuiSliderInt *)((guiPage.getControls())[i]))->value);
+		} else if (controlType == "SliderFloat") {
+			ofLog(OF_LOG_NOTICE, "Sharing SliderFloat parameter: " + (guiPage.getControls())[i]->key);
+			ofxNetworkedParameters.addNetworkedParameter(pageName + (guiPage.getControls())[i]->key,
+								  ((ofxSimpleGuiSliderFloat *)((guiPage.getControls())[i]))->value);
+		}
+	}
+}

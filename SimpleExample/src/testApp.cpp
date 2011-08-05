@@ -40,15 +40,18 @@ void testApp::setup(){
 	ofBackground(0);
 	ofSetVerticalSync(true);
 	ofSetFrameRate(30);
+	backgroundWhite = false;
 	
 	client = new mpeClientTCP();
-	client->setup("mpe_client_settings.xml", true);
-	client->start();
+	client->setup("mpe_client_settings.xml", true);	
+	ofxNetworkedParameters.setMPEClient(client);
 	
-	backgroundWhite = false;
-	networkedParameters.setMPEClient(client);
-	networkedParameters.addNetworkedParameter("background", &backgroundWhite);
-	networkedParameters.attachToNetwork();
+	ofxNetworkedParameters.addNetworkedParameter("background", &backgroundWhite);
+	
+	client->start();
+
+	ofxNetworkedParameters.attachToNetwork();
+
 }
 
 //--------------------------------------------------------------

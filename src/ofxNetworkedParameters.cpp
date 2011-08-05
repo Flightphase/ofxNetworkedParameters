@@ -1,8 +1,8 @@
 /**
  *  ofxNetworkedParameters
- *
- *   Copyright (c) 2011, Tim Gfrerer, James George
  *	
+ *   Copyright (c) 2011, Tim Gfrerer, James George
+ * 
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
  * files (the "Software"), to deal in the Software without
@@ -35,51 +35,46 @@
 #include "ofxNetworkedParameters.h"
 
 
-ofxNetworkedParameters::ofxNetworkedParameters()
-{
-
+ofxNetworkedParametersHandler::ofxNetworkedParametersHandler(){
+	client = NULL;
 }
 
-
 //--------------------------------------------------------------
-
-ofxNetworkedParameters::~ofxNetworkedParameters(){
-	map<string, NetworkedParameter*>::iterator param = parameterList.begin();
+ofxNetworkedParametersHandler::~ofxNetworkedParametersHandler(){
+	map<string, ofxNetworkedParameter*>::iterator param = parameterList.begin();
 
 	while (param != parameterList.end()) {
 		delete param->second;
 		param++;
 	}
-
 }
 
-void ofxNetworkedParameters::attachToNetwork(){
-	ofAddListener(ofxMPEEvents.mpeMessage, this, &ofxNetworkedParameters::mpeMessageEvent);
-	ofAddListener(ofEvents.update, this, &ofxNetworkedParameters::update);
+void ofxNetworkedParametersHandler::attachToNetwork(){
+	ofAddListener(ofxMPEEvents.mpeMessage, this, &ofxNetworkedParametersHandler::mpeMessageEvent);
+	ofAddListener(ofEvents.update, this, &ofxNetworkedParametersHandler::update);
 }
 
-void ofxNetworkedParameters::detachFromNetwork(){
-	ofRemoveListener(ofEvents.update, this, &ofxNetworkedParameters::update);
-	ofRemoveListener(ofxMPEEvents.mpeMessage, this, &ofxNetworkedParameters::mpeMessageEvent);
-}
-
-
-//--------------------------------------------------------------
-
-void ofxNetworkedParameters::addNetworkedParameter(string _name, int * _p){
-	parameterList[_name] = new NetworkedParameter(_p, "int");
-}
-void ofxNetworkedParameters::addNetworkedParameter(string _name, float * _p){
-	parameterList[_name] = new NetworkedParameter(_p, "float");
-}
-void ofxNetworkedParameters::addNetworkedParameter(string _name, bool * _p){
-	parameterList[_name] = new NetworkedParameter(_p, "bool");
+void ofxNetworkedParametersHandler::detachFromNetwork(){
+	ofRemoveListener(ofEvents.update, this, &ofxNetworkedParametersHandler::update);
+	ofRemoveListener(ofxMPEEvents.mpeMessage, this, &ofxNetworkedParametersHandler::mpeMessageEvent);
 }
 
 //--------------------------------------------------------------
+void ofxNetworkedParametersHandler::addNetworkedParameter(string _name, int * _p){
+	parameterList[_name] = new ofxNetworkedParameter(_p, "int");
+}
 
-void ofxNetworkedParameters::update(ofEventArgs& args){
-	map<string, NetworkedParameter*>::iterator param = parameterList.begin();
+void ofxNetworkedParametersHandler::addNetworkedParameter(string _name, float * _p){
+	parameterList[_name] = new ofxNetworkedParameter(_p, "float");
+}
+
+void ofxNetworkedParametersHandler::addNetworkedParameter(string _name, bool * _p){
+	parameterList[_name] = new ofxNetworkedParameter(_p, "bool");
+}
+
+//--------------------------------------------------------------
+void ofxNetworkedParametersHandler::update(ofEventArgs& args){
+	map<string, ofxNetworkedParameter*>::iterator param = parameterList.begin();
 
 	while (param != parameterList.end()) {
 		if (param->second->hasChanged()){
@@ -98,21 +93,20 @@ void ofxNetworkedParameters::update(ofEventArgs& args){
 		}
 		param++;
 	}
-
 }
 
-void ofxNetworkedParameters::setMPEClient(mpeClientTCP* _client){
+void ofxNetworkedParametersHandler::setMPEClient(mpeClientTCP* _client){
 	client = _client;
 }
 
 //--------------------------------------------------------------
-void ofxNetworkedParameters::mpeMessageEvent(ofxMPEEventArgs& eventArgs){
+void ofxNetworkedParametersHandler::mpeMessageEvent(ofxMPEEventArgs& eventArgs){
 	vector<string> msg = ofSplitString(eventArgs.message, "|", true, true);
 	// "nP|integer1|int|-2"
 	
 	if (msg.size() == 4 && msg[0]=="nP") {
 
-		map<string, NetworkedParameter*>::iterator param = parameterList.find(msg[1]);
+		map<string, ofxNetworkedParameter*>::iterator param = parameterList.find(msg[1]);
 
 		ofLog(OF_LOG_NOTICE, "ofxNetworkedParameters: Setting parameter " + msg[1] + " to " + ofToString(msg[3]));
 
@@ -132,13 +126,9 @@ void ofxNetworkedParameters::mpeMessageEvent(ofxMPEEventArgs& eventArgs){
 		} else {
 			ofLog(OF_LOG_ERROR, "ofxNetworkedParameters: Could not find parameter with name: " + msg[1] + " in networked parameters list");
 		}
-
-
 	}
-
 }
 
 //--------------------------------------------------------------
 // instantiate a global object upon inclusion of this header file.
-
-ofxNetworkedParameters networkedParameters;
+ofxNetworkedParametersHandler ofxNetworkedParameters;

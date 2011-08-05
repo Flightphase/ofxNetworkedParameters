@@ -1,6 +1,7 @@
 <settings>
-	<client_id>0</client_id>
+	<client_id>1</client_id>
 	<server>
+		<!--<ip> 192.168.2.16</ip>-->
 		<ip>localhost</ip>
 		<port>9002</port> 
     </server>
